@@ -66,8 +66,10 @@ function calculate() {
             result = firstOperand / secondOperand;
             break;
         case '%':
-            // Calculate percentage of the first operand
             result = (firstOperand * secondOperand) / 100;
+            break;
+        case '^':
+            result = Math.pow(firstOperand, secondOperand);
             break;
         default:
             return;
@@ -76,6 +78,12 @@ function calculate() {
     currentInput = result.toString();
     operator = '';
     firstOperand = null;
+    updateDisplay();
+}
+
+function calculatePlusMinus() {
+    if (currentInput === '') return;
+    currentInput = (parseFloat(currentInput) * -1).toString();
     updateDisplay();
 }
 
@@ -92,7 +100,7 @@ function calculateFactorial() {
 
 function factorial(n) {
     if (n === 0 || n === 1) return 1;
-    if (n > 20) return Infinity; // Prevent excessive recursion for large numbers
+    if (n > 20) return Infinity;
     return n * factorial(n - 1);
 }
 
