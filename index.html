@@ -12,12 +12,15 @@
         <div id="calculator">
             <h1 id="judul">Kalkulator Farhan</h1>
             <input id="display" readonly placeholder="0" />
+
             <div id="buttons-grid">
+                <!-- Top Row -->
                 <button class="btn clear" onclick="clearDisplay()">AC</button>
                 <button class="btn arrow" onclick="clearCurrent()">←</button>
                 <button class="btn operator" onclick="setOperand('%')">%</button>
                 <button class="btn operator" onclick="setOperand('/')">÷</button>
 
+                <!-- Number and Operator Rows -->
                 <button class="btn" onclick="appendNumber('7')">7</button>
                 <button class="btn" onclick="appendNumber('8')">8</button>
                 <button class="btn" onclick="appendNumber('9')">9</button>
@@ -33,9 +36,12 @@
                 <button class="btn" onclick="appendNumber('3')">3</button>
                 <button class="btn operator" onclick="setOperand('+')">+</button>
 
+                <!-- Bottom Row -->
                 <button class="btn zero" onclick="appendNumber('0')">0</button>
                 <button class="btn" onclick="appendDecimal()">.</button>
                 <button class="btn operator" onclick="calculateFactorial()">!</button>
+                <button class="btn" onclick="calculatePlusMinus()">±</button>
+                <button class="btn operator" onclick="setOperand('^')">^</button>
                 <button class="btn equals" onclick="calculate()">=</button>
             </div>
         </div>
