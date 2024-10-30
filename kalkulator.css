@@ -6,7 +6,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(145deg, #121212, #232323);
+  background: linear-gradient(145deg, white, black);
   color: #eaeaea;
 }
 
@@ -15,15 +15,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 70%;
+  width: 150%;
+  height: 100%;
 }
 
 /* Calculator Box */
 #calculator {
-  background: linear-gradient(145deg, #2d2d2d, #1c1c1c);
+  background: linear-gradient(145deg, black, red);
   border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 30px rgb(255, 255, 255);
   padding: 15px;
   width: 300px; /* Reduced width for compact design */
   transition: transform 0.3s ease;
@@ -35,7 +35,7 @@ body {
 
 /* Title Styling */
 #judul {
-  color: #61dafb;
+  color: #ff0000;
   text-align: center;
   margin-bottom: 15px;
   font-size: 1.3rem; /* Smaller font size */
@@ -46,20 +46,20 @@ body {
 #display {
   width: 100%;
   padding: 12px;
-  background: #333;
-  color: #ffffff;
+  background: #ffffff;
+  color: #010101;
   border: none;
   border-radius: 12px;
   text-align: right;
   font-size: 2rem; /* Slightly smaller font */
   margin-bottom: 15px;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 10px rgba(254, 0, 190, 0.4);
   transition: background 0.3s ease;
 }
 
 #display:focus {
   outline: none;
-  background: #444;
+  background: #f204a3;
 }
 
 /* Grid layout for buttons */
@@ -75,7 +75,7 @@ body {
   border: none;
   border-radius: 12px;
   font-size: 1.2rem; /* Reduced font size */
-  padding: 15px; /* Smaller padding */
+  padding: 12px; /* Smaller padding */
   color: #eaeaea;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -85,7 +85,7 @@ body {
 .btn:hover {
   background: #444;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgb(255, 255, 255);
 }
 
 /* Operator Buttons */
@@ -103,7 +103,7 @@ body {
 .equals {
   background: #34c759;
   color: #ffffff;
-  grid-column: span 4;
+  grid-column: span 1; /* Spanning one column */
   font-weight: bold;
 }
 
@@ -141,9 +141,29 @@ body {
   background: #ff8c00;
 }
 
+/* Decimal Button */
+.decimal {
+  background: #1e90ff; /* Change to your desired color */
+  color: #ffffff; /* Text color */
+}
+
+.decimal:hover {
+  background: #1c86ee; /* Change to a darker shade on hover */
+}
+
+/* Plus/Minus Button */
+.PlusMinus {
+  background: #ffa500; /* Change to your desired color */
+  color: #ffffff; /* Text color */
+}
+
+.PlusMinus:hover {
+  background: #ff8c00; /* Change to a darker shade on hover */
+}
+
 /* Zero Button - Wider */
 .zero {
-  grid-column: span 2;
+  grid-column: span 3; /* Spanning three columns */
 }
 
 /* Responsive Layout */
